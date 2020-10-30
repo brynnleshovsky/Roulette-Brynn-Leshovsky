@@ -25,15 +25,15 @@ public class App {
          String inOrOut = input.nextLine();
          if (inOrOut.equals(in)){
              System.out.println("Enter a number 1-36 you would like to bet on.");
-             int betNum = input.nextInt();
+             int numberBet = input.nextInt();
              input.nextLine();
              System.out.println("And how much would you like to bet?");
-             int betMon = input.nextInt();
+             int betMon1 = input.nextInt();
              input.nextLine();
             
          
-             System.out.println("Okay. You will bet $" + betMon + " on " + betNum + ".");
-             chips = chips - betMon;
+             System.out.println("Okay. You will bet $" + betMon1 + " on " + numberBet + ".");
+             chips = chips - betMon1;
              remainingBets = remainingBets -1;
              System.out.println("You have " + chips + " chips remaining.");
          }
@@ -44,38 +44,38 @@ public class App {
                  String outBet = input.nextLine();
                  if (outBet.equals(red)){
                      System.out.println("And how much would you like to bet?");
-                     int betMon = input.nextInt();
+                     int betMon2 = input.nextInt();
                      input.nextLine();
-                     System.out.println("Okay. You will bet $" + betMon + " on " + red + ".");
+                     System.out.println("Okay. You will bet $" + betMon2 + " on " + red + ".");
                      remainingBets = remainingBets -1;
-                     chips = chips - betMon;
+                     chips = chips - betMon2;
                      System.out.println("You have " + chips + " chips remaining.");
                  }
                  if (outBet.equals(black)){
                      System.out.println("And how much would you like to bet?");
-                     int betMon = input.nextInt();
+                     int betMon2 = input.nextInt();
                      input.nextLine();
-                     System.out.println("Okay. You will bet $" + betMon + " on " + black + ".");
+                     System.out.println("Okay. You will bet $" + betMon2+ " on " + black + ".");
                      remainingBets = remainingBets -1;
-                     chips = chips - betMon;
+                     chips = chips - betMon2;
                      System.out.println("You have " + chips + " chips remaining.");
                  }
                  if (outBet.equals(odd)){
                      System.out.println("And how much would you like to bet?");
-                     int betMon = input.nextInt();
+                     int betMon2 = input.nextInt();
                      input.nextLine();
-                     System.out.println("Okay. You will bet $" + betMon + " on " + odd + ".");
+                     System.out.println("Okay. You will bet $" + betMon2 + " on " + odd + ".");
                      remainingBets = remainingBets -1;
-                     chips = chips - betMon;
+                     chips = chips - betMon2;
                      System.out.println("You have " + chips + " chips remaining.");
                  }
                  if (outBet.equals(even)){
                      System.out.println("And how much would you like to bet?");
-                     int betMon = input.nextInt();
+                     int betMon2 = input.nextInt();
                      input.nextLine();
-                     System.out.println("Okay. You will bet $" + betMon + " on " + even + ".");
+                     System.out.println("Okay. You will bet $" + betMon2 + " on " + even + ".");
                      remainingBets = remainingBets -1;
-                     chips = chips - betMon;
+                     chips = chips - betMon2;
                      System.out.println("You have " + chips + " chips remaining.");
                  }
              }
@@ -96,10 +96,14 @@ public class App {
          
          if (again.equals(no)){
              looping = false;
+             if (numberBet == n1){
+                 System.out.println("ASK WHY OUBET IS FINE BUT NUMBER BET ISNT");
+
+             }
+             if (Outbet == ){
+
+             }
              System.out.println("you cashed out with ");
-         }
-         else{
-             System.out.println("okay.");
          }
          }
          } 
