@@ -1,6 +1,7 @@
 package app;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -23,17 +24,20 @@ public class App {
          System.out.println("Would you like to bet inside or outside?");
          String inOrOut = input.nextLine();
          if (inOrOut.equals(in)){
-             System.out.println("Enter the number you would like to bet on.");
+             System.out.println("Enter a number 1-36 you would like to bet on.");
              int betNum = input.nextInt();
              input.nextLine();
              System.out.println("And how much would you like to bet?");
              int betMon = input.nextInt();
              input.nextLine();
+            
+         
              System.out.println("Okay. You will bet $" + betMon + " on " + betNum + ".");
              chips = chips - betMon;
              remainingBets = remainingBets -1;
              System.out.println("You have " + chips + " chips remaining.");
          }
+         
 
              else if (inOrOut.equals(out)){
                  System.out.println("would you like to bet even, odd, black, or red?");
@@ -81,9 +85,23 @@ public class App {
              System.out.println("check");
          }
          else if (secondBet.equals(no)){
-             looping = false;
              System.out.println("Betting is now complete.");
+             System.out.println("Spinning...");
+              Random rnd = new Random(); 
+         // 0 to 36
+         int n1 = rnd.nextInt(37); 
+         System.out.println("The number is " + n1);
+         System.out.println("would you like to spin again?");
+         String again = input.nextLine();
+         
+         if (again.equals(no)){
+             looping = false;
+             System.out.println("you cashed out with ");
          }
-         }  
+         else{
+             System.out.println("okay.");
+         }
+         }
+         } 
+        }
     }
-}
